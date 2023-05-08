@@ -1,15 +1,8 @@
 # text-to-morse
-This Python code allows the user to input a string of characters and converts it to its equivalent Morse code symbols. 
-Here's how the code works:
+This code is a Python program that converts a given text string into Morse code. It uses a dictionary named 'morse_code' that maps each letter, number, and special character to its corresponding Morse code symbol. The program accepts user input using the 'input()' function and then uses a 'while' loop to keep accepting input until the user types "exit".
 
-The code defines a dictionary called 'morse_code' that maps each character to its Morse code symbol.
+Inside the loop, the program uses the 'upper()' method to convert the input string to uppercase (since the Morse code symbols are all uppercase). It then uses a list comprehension to create a list of Morse code symbols by looking up each character in the 'morse_code' dictionary using the 'get()' method. If the character is not found in the dictionary (i.e., it's not in the keys), the 'get()' method returns an empty string.
 
-The code prompts the user to input the text they want to be converted, which is stored in the 'user_text' variable.
-
-The code uses a list comprehension to create a list of Morse code symbols. For each character in the 'user_text' string, the code checks if the character exists in the 'morse_code' dictionary. If it does, the corresponding Morse code symbol is added to the list. If the character does not exist in the dictionary, an empty string is added to the list.
-
-The list of Morse code symbols is joined into a string using the 'str.join()' method with a space character as the separator. The resulting string is stored in the 'morse_string' variable.
-
-The code checks if the 'morse_string' variable is empty. If it is, it means that none of the characters in the 'user_text' string had a corresponding Morse code symbol in the 'morse_code' dictionary. The code prints a message to inform the user of this. If the 'morse_string' variable is not empty, the code prints the resulting Morse code string.
+Finally, the program uses the 'join()' method to join the Morse code symbols into a single string, separated by spaces. If the resulting Morse string is empty, the program prints a message indicating that no Morse code was found for the given input. Otherwise, it prints the Morse string.
 
 Note that this code also includes additional characters in the 'morse_code' dictionary compared to the original code. These characters include '!', '&', ',' '(', ')', '+', '-', '/', ':', ';', '=',' _', '%', and '@'.
